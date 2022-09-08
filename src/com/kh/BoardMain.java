@@ -1,4 +1,6 @@
 package com.kh;
+import com.kh.dao.MemberInsertDao;
+import com.kh.dao.MemberSelectDao;
 import com.kh.vo.MemberVO;
 
 import java.util.List;
