@@ -49,7 +49,6 @@ public class Write_dao {
         return list;
     }
 
-
     public void writeSelect(){
         System.out.print("작성할 게시판을 선택해 주세요");
 
@@ -62,8 +61,6 @@ public class Write_dao {
                 System.out.print("잘못 입력 하셨습니다. 다시 선택해 주세요");
             else break;
         }
-
-
         System.out.print("글 번호를 입력해 주세요 : ");
         int num = sc.nextInt();
         System.out.print("글 제목을 입력해 주세요 : ");
@@ -72,10 +69,25 @@ public class Write_dao {
         String contents = sc.next();
         System.out.print("작성자 아이디를 입력해 주세요 : ");
         String id = sc.next();
-        String rdate;
-        String viewcnt;
+
+
+        String sql = "INSERT INTO WRITE (WRITE_NAME, WRITE_NUM ,WRITE_TITLE ,WRITE_CONTENTS ,WRITE_ID)"
+                + "VALUES(?,?,?,?,?)";
+
+        try{
+            conn = Common.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1,name);
+            pstmt.setInt(2,num);
+            pstmt.setString(3,title);
+            pstmt.setString(4,contents);
+            pstmt.setString(5,id);
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        Common.close(pstmt);
+        Common.close(conn);
     }
-
-
-
 }
