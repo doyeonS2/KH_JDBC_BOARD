@@ -69,21 +69,19 @@ public class Write_dao {
         String contents = sc.next();
         System.out.print("작성자 아이디를 입력해 주세요 : ");
         String id = sc.next();
-        String rdate = null; // 에러
-        String viewcnt = null; // 에러
 
-        String sql = "INSERT INTO WRITE (WRITE_NAME, WRITE_NUM ,WRITE_TITLE ,WRITE_CONTENTS ,WRITE_ID ,WRITE_RDATE ,WRITE_VIEWCNT)"
-                + "VALUES(?,?,?,?,?,?,?)";
+
+        String sql = "INSERT INTO WRITE (WRITE_NAME, WRITE_NUM ,WRITE_TITLE ,WRITE_CONTENTS ,WRITE_ID)"
+                + "VALUES(?,?,?,?,?)";
 
         try{
             conn = Common.getConnection();
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1,num);
-            pstmt.setString(2,title);
-            pstmt.setString(3,contents);
-            pstmt.setString(4,id);
-            pstmt.setString(5,rdate);   // 에러
-            pstmt.setString(6,viewcnt); // 에러
+            pstmt.setString(1,name);
+            pstmt.setInt(2,num);
+            pstmt.setString(3,title);
+            pstmt.setString(4,contents);
+            pstmt.setString(5,id);
 
 
         }catch (Exception e){
