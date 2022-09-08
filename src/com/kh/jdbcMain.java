@@ -10,8 +10,8 @@ import java.sql.Statement;
 // 12:39 도연 test
 // test 윤정
 // soon 점심시간~~~~
-
 // 정찬호 12:38
+// 승렬 test
 
 
 public class jdbcMain {
