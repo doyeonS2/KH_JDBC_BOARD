@@ -8,7 +8,7 @@ import java.sql.Statement;
 //test 숩
 // 12:33
 // 12:39 도연 test
-// test 윤정
+// test 윤정 그럼 이거 업데이트를 수시로 눌러줘야 하나요?
 // soon 점심시간~~~~ 은종
 
 
