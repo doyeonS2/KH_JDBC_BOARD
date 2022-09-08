@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Scanner;
 
 // 다들 즐거운 추석되세요 껄껄
+// 회원가입 수정 입니다
 
 public class BoardMain {
     public static void main(String[] args) {
