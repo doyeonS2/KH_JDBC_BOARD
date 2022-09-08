@@ -17,7 +17,38 @@ public class Write_dao {
     PreparedStatement pstmt = null;
     ResultSet rs = null;
     Scanner sc = new Scanner(System.in);
-
+    // Board 테이블용으로 수정
+//    public List<WriteVO> write(){
+//        List<WriteVO> list = new ArrayList<>();
+//        try{
+//            conn = Common.getConnection();
+//            stmt = conn.createStatement();
+//            String sql = "SELECT * FROM WRITE";
+//            rs = stmt.executeQuery(sql);
+//
+//            while(rs.next()){
+//                String write_Name = rs.getString("WRITE_NAME");
+//                int    write_num = rs.getInt("WRITE_NUM");
+//                String write_Title = rs.getString("WRITE_TITLE");
+//                String write_Contents = rs.getString("WRITE_CONTENTS");
+//                String write_Id = rs.getString("WRITE_ID");
+//                String write_RDate = rs.getString("WRITE_RDATE");
+//                int    write_ViewCnt = rs.getInt("WRITE_VIEWCNT");
+//
+//                WriteVO vo = new WriteVO(write_Name , write_num, write_Title,
+//                        write_Contents, write_Id, write_RDate,write_ViewCnt );
+//                list.add(vo);
+//            }
+//            Common.close(rs);
+//            Common.close(stmt);
+//            Common.close(conn);
+//
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        return list;
+//    }
+//
     public void writeSelect(){
         System.out.print("작성할 게시판을 선택해 주세요");
 
@@ -59,4 +90,7 @@ public class Write_dao {
         Common.close(pstmt);
         Common.close(conn);
     }
+
 }
+
+
