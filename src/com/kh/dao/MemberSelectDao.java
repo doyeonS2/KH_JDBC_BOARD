@@ -31,7 +31,7 @@ public class MemberSelectDao {
                 String Email = rs.getString("EMAIL");
                 String Phone = rs.getString("PHONE");
                 String Recommender_ID = rs.getString("RECOMMENDER_ID");
-                String Reg_Date = rs.getString("REG_DATE");
+//                String Reg_Date = rs.getString("REG_DATE");
 
                 MemberVO vo = new MemberVO();
                 vo.setMEMBER_NUM(MEMBER_NUM);
@@ -43,7 +43,7 @@ public class MemberSelectDao {
                 vo.setEMAIL(Email);
                 vo.setPHONE(Phone);
                 vo.setRECOMMENDER_ID(Recommender_ID);
-                vo.setREG_DATE(Reg_Date);
+//                vo.setREG_DATE(Reg_Date);
 
                 list.add(vo);
 
