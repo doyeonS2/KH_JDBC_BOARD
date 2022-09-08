@@ -6,18 +6,8 @@ import com.kh.vo.MemberVO;
 
 import java.util.List;
 import java.util.Scanner;
-//test chanho
-//12:27
-//test 숩
-// 12:33
-// 12:39 도연 test
-// test 윤정
-// soon 점심시간~~~~ 은종
-// 정찬호 12:38
-// test 민형
-// test 승렬
-// test 정운
-// ~~ 3조 전원 성공 ~~~~~~~~~~~~~~~~~~~~~~~~~~!!
+
+// 다들 즐거운 추석되세요 껄껄
 
 public class BoardMain {
     public static void main(String[] args) {
