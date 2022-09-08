@@ -14,7 +14,7 @@ public class MemberInsertDao {
         Statement stmt = null;
         PreparedStatement pstmt = null;
         Scanner sc = new Scanner(System.in);
-        System.out.print("회원가입 정보를 입력하세요");
+        System.out.println("회원가입 정보를 입력하세요");
         System.out.print("회원번호 : ");
         int Member_Num = sc.nextInt();
         System.out.print("ID : ");
