@@ -1,5 +1,5 @@
 package com.kh;
-import kh_jdbc_board.vo.MemberVO;
+import com.kh.vo.MemberVO;
 
 import java.util.List;
 import java.util.Scanner;
