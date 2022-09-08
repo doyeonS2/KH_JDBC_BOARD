@@ -11,7 +11,7 @@ import java.sql.Statement;
 // test 윤정
 // soon 점심시간~~~~ 은종
 
-
+// 정찬호 12:38
 
 
 public class jdbcMain {
@@ -35,6 +35,7 @@ public class jdbcMain {
                 System.out.print(rs.getInt("SAL") + " ");
                 System.out.print(rs.getInt("COMM") + " ");
                 System.out.print(rs.getInt("DEPTNO") + " ");
+                System.out.println();
                 System.out.println();
             }
 
