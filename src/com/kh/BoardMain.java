@@ -19,6 +19,7 @@ public class BoardMain {
 
     public static void MemberSelect() {
         Scanner sc = new Scanner(System.in);
+        while (true) {
             System.out.println("========[MEMBER Table 조회]==========");
             System.out.println("메뉴를 선택하세요");
             System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 게시판나가기 [6] 회원탈퇴");
@@ -45,9 +46,10 @@ public class BoardMain {
                 case 6:
                     MemberDeleteDao delete = new MemberDeleteDao();
                     delete.empDelete();
-                   break;
+                    break;
 
 
+            }
         }
     }
 }

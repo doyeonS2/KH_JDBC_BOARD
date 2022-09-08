@@ -25,6 +25,7 @@ public class MemberDeleteDao {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        Common.commit(conn);
         Common.close(stmt);
         Common.close(conn);
 
