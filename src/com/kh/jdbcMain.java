@@ -3,6 +3,8 @@ import com.kh.util.Common;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.List;
+import java.util.Scanner;
 //test chanho
 //12:27
 //test 숩
@@ -16,31 +18,26 @@ import java.sql.Statement;
 
 public class jdbcMain {
     public static void main(String[] args) {
-        Connection conn = null;
-        Statement stmt = null;
-        ResultSet rs = null;
-        try {
-            conn = Common.getConnection();
-            stmt = conn.createStatement();
-            String sql = "SELECT * from EMP";
-            rs = stmt.executeQuery(sql);
+        MemberSelect();
+    }
 
-            System.out.println(rs);
-            while (rs.next()) {
-                System.out.print(rs.getInt("EMPNO") + " ");
-                System.out.print(rs.getString("ENAME") + " ");
-                System.out.print(rs.getString("JOB") + " ");
-                System.out.print(rs.getInt("MGR") + " ");
-                System.out.print(rs.getDate("HIREDATE") + " ");
-                System.out.print(rs.getInt("SAL") + " ");
-                System.out.print(rs.getInt("COMM") + " ");
-                System.out.print(rs.getInt("DEPTNO") + " ");
-                System.out.println();
-                System.out.println();
+    public static void MemberSelect() {
+        Scanner sc = new Scanner(System.in);
+        while(true){
+            System.out.println("========[EMP Table 조회]==========");
+            System.out.println("메뉴를 선택하세요");
+            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기");
+            int sel = sc.nextInt();
+            switch (sel) {
+                case 1:
+                    MemberInsertDao insert = new MemberInsertDao();
+                    insert.empInsert();
+                    break;
+                case 2:
+                    MemberSelectDao select = new MemberSelectDao();
+                    List<MemberVO> list = select.listMember();
+                    select.printEmpSelect(list);
             }
-
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
