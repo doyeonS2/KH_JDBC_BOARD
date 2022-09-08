@@ -70,7 +70,7 @@ public class Write_dao {
         System.out.print("작성자 아이디를 입력해 주세요 : ");
         String id = sc.next();
         String rdate = null; // 에러
-        String viewcnt; // 에러
+        String viewcnt = null; // 에러
 
         String sql = "INSERT INTO WRITE (WRITE_NAME, WRITE_NUM ,WRITE_TITLE ,WRITE_CONTENTS ,WRITE_ID ,WRITE_RDATE ,WRITE_VIEWCNT)"
                 + "VALUES(?,?,?,?,?,?,?)";

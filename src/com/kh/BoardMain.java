@@ -29,7 +29,7 @@ public class BoardMain {
         while(true){
             System.out.println("========[MEMBER Table 조회]==========");
             System.out.println("메뉴를 선택하세요");
-            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기");
+            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 게시판나가기");
             int sel = sc.nextInt();
             switch (sel) {
                 case 1:
@@ -44,7 +44,9 @@ public class BoardMain {
                     Write_dao insert2 = new Write_dao();
                     insert2.writeSelect();
                     break;
-
+                case 5:
+                    System.out.println("게시판을 나갑니다! 안녕히가십시오");
+                    return;
 
             }
         }
