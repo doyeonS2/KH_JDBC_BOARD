@@ -13,6 +13,8 @@ public class MemberInsertDao {
         Connection conn = null;
         PreparedStatement pstmt = null;
         Scanner sc = new Scanner(System.in);
+
+
         System.out.println("회원가입 정보를 입력하세요");
         System.out.print("회원번호 : ");
         int MEMBER_NUM = sc.nextInt();
@@ -50,8 +52,8 @@ public class MemberInsertDao {
             pstmt.setString(8, PHONE);
             pstmt.setString(9, RECOMMENDER_ID);
             pstmt.setString(10, REG_DATE);
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
         Common.close(pstmt);

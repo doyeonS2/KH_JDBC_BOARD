@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 // 다들 즐거운 추석되세요 껄껄
+// 회원가입 완료
+// 글쓰기 완료
 
 public class BoardMain {
     public static void main(String[] args) {
@@ -17,7 +19,6 @@ public class BoardMain {
 
     public static void MemberSelect() {
         Scanner sc = new Scanner(System.in);
-        while(true){
             System.out.println("========[MEMBER Table 조회]==========");
             System.out.println("메뉴를 선택하세요");
             System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 게시판나가기 [6] 회원탈퇴");
@@ -46,7 +47,7 @@ public class BoardMain {
                     delete.empDelete();
                    break;
 
-            }
+
         }
     }
 }
