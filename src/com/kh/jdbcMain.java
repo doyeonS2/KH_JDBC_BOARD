@@ -4,6 +4,11 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 //test chanho
+//12:27
+
+
+
+
 public class jdbcMain {
     public static void main(String[] args) {
         Connection conn = null;
