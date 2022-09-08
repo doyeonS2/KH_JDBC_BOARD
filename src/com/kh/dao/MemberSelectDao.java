@@ -22,7 +22,7 @@ public class MemberSelectDao {
             rs = stmt.executeQuery(query);
 
             while (rs.next()) {
-                int Member_Num = rs.getInt("Member_Num");
+                int MEMBER_NUM = rs.getInt("MEMBER_NUM");
                 String ID = rs.getString("ID");
                 String PASSWORD = rs.getString("PASSWORD");
                 String Name = rs.getString("NAME");
@@ -34,16 +34,16 @@ public class MemberSelectDao {
                 String Reg_Date = rs.getString("REG_DATE");
 
                 MemberVO vo = new MemberVO();
-                vo.setMemeber_Num(Member_Num);
+                vo.setMEMBER_NUM(MEMBER_NUM);
                 vo.setID(ID);
                 vo.setPASSWORD(PASSWORD);
-                vo.setName(Name);
-                vo.setBirth(Birth);
-                vo.setGender(Gender);
-                vo.setEmail(Email);
-                vo.setPhone(Phone);
-                vo.setRecommender_ID(Recommender_ID);
-                vo.setReg_Date(Reg_Date);
+                vo.setNAME(Name);
+                vo.setBIRTH(Birth);
+                vo.setGENDER(Gender);
+                vo.setEMAIL(Email);
+                vo.setPHONE(Phone);
+                vo.setRECOMMENDER_ID(Recommender_ID);
+                vo.setREG_DATE(Reg_Date);
 
                 list.add(vo);
 
@@ -59,16 +59,16 @@ public class MemberSelectDao {
 
     public void printEmpSelect(List<MemberVO> list) {
         for (MemberVO e : list) {
-            System.out.print(e.getMemeber_Num() + " ");
+            System.out.print(e.getMEMBER_NUM() + " ");
             System.out.print(e.getID() + " ");
             System.out.print(e.getPASSWORD() + " ");
-            System.out.print(e.getName() + " ");
-            System.out.print(e.getBirth() + " ");
-            System.out.print(e.getGender() + " ");
-            System.out.print(e.getEmail() + " ");
-            System.out.print(e.getPhone() + " ");
-            System.out.print(e.getRecommender_ID() + " ");
-            System.out.print(e.getReg_Date() + " ");
+            System.out.print(e.getNAME() + " ");
+            System.out.print(e.getBIRTH() + " ");
+            System.out.print(e.getGENDER() + " ");
+            System.out.print(e.getEMAIL() + " ");
+            System.out.print(e.getPHONE() + " ");
+            System.out.print(e.getRECOMMENDER_ID() + " ");
+            System.out.print(e.getREG_DATE() + " ");
             System.out.println();
         }
     }

@@ -16,46 +16,46 @@ public class MemberInsertDao {
         Scanner sc = new Scanner(System.in);
         System.out.println("회원가입 정보를 입력하세요");
         System.out.print("회원번호 : ");
-        int Member_Num = sc.nextInt();
+        int MEMBER_NUM = sc.nextInt();
         System.out.print("ID : ");
         String ID = sc.next();
         System.out.print("PASSWORD : ");
         String PASSWORD = sc.next();
         System.out.print("이름 : ");
-        String Name = sc.next();
+        String NAME = sc.next();
         System.out.print("생일 : ");
-        String Birth = sc.next();
+        String BIRTH = sc.next();
         System.out.print("성별 : ");
-        String Gender = sc.next();
+        String GENDER = sc.next();
         System.out.print("이메일주소 : ");
-        String Email = sc.next();
+        String EMAIL = sc.next();
         System.out.print("휴대폰 번호 : ");
-        String Phone = sc.next();
+        String PHONE = sc.next();
         System.out.print("추천인 ID : ");
-        String Recommender_ID = sc.next();
+        String RECOMMENDER_ID = sc.next();
         System.out.print("가입일 : ");
-        String Reg_Date = sc.next();
+        String REG_DATE = sc.next();
 
         String query = "INSERT INTO MEMBER(MEMBER_NUM, ID, PASSWORD, NAME , BIRTH, GENDER, EMAIL, PHONE, RECOMMEND_ID, REG_DATE " + "VALUES (?,?,?,?,?,?,?,?,?,?)";
 
         try {
             conn = Common.getConnection();
             pstmt = conn.prepareStatement(query);
-            pstmt.setInt(1, Member_Num);
+            pstmt.setInt(1, MEMBER_NUM);
             pstmt.setString(2, ID);
             pstmt.setString(3, PASSWORD);
-            pstmt.setString(4, Name);
-            pstmt.setString(5, Birth);
-            pstmt.setString(6, Gender);
-            pstmt.setString(7, Email);
-            pstmt.setString(8, Phone);
-            pstmt.setString(9, Recommender_ID);
-            pstmt.setString(10, Reg_Date);
+            pstmt.setString(4, NAME);
+            pstmt.setString(5, BIRTH);
+            pstmt.setString(6, GENDER);
+            pstmt.setString(7, EMAIL);
+            pstmt.setString(8, PHONE);
+            pstmt.setString(9, RECOMMENDER_ID);
+            pstmt.setString(10, REG_DATE);
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        Common.commit(conn);
+//        Common.commit(conn);
         Common.close(pstmt);
         Common.close(conn);
 

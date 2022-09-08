@@ -1,12 +1,14 @@
 package com.kh.vo;
 
 public class MemberVO {
-    public int getMemeber_Num() {
-        return Memeber_Num;
+    private int MEMBER_NUM;
+
+    public int getMEMBER_NUM() {
+        return MEMBER_NUM;
     }
 
-    public void setMemeber_Num(int memeber_Num) {
-        Memeber_Num = memeber_Num;
+    public void setMEMBER_NUM(int MEMBER_NUM) {
+        this.MEMBER_NUM = MEMBER_NUM;
     }
 
     public String getID() {
@@ -25,71 +27,69 @@ public class MemberVO {
         this.PASSWORD = PASSWORD;
     }
 
-    public String getName() {
-        return Name;
+    public String getNAME() {
+        return NAME;
     }
 
-    public void setName(String name) {
-        Name = name;
+    public void setNAME(String NAME) {
+        this.NAME = NAME;
     }
 
-    public String getBirth() {
-        return Birth;
+    public String getBIRTH() {
+        return BIRTH;
     }
 
-    public void setBirth(String birth) {
-        Birth = birth;
+    public void setBIRTH(String BIRTH) {
+        this.BIRTH = BIRTH;
     }
 
-    public String getGender() {
-        return Gender;
+    public String getGENDER() {
+        return GENDER;
     }
 
-    public void setGender(String gender) {
-        Gender = gender;
+    public void setGENDER(String GENDER) {
+        this.GENDER = GENDER;
     }
 
-    public String getEmail() {
-        return Email;
+    public String getEMAIL() {
+        return EMAIL;
     }
 
-    public void setEmail(String email) {
-        Email = email;
+    public void setEMAIL(String EMAIL) {
+        this.EMAIL = EMAIL;
     }
 
-    public String getPhone() {
-        return Phone;
+    public String getPHONE() {
+        return PHONE;
     }
 
-    public void setPhone(String phone) {
-        Phone = phone;
+    public void setPHONE(String PHONE) {
+        this.PHONE = PHONE;
     }
 
-    public String getRecommender_ID() {
-        return Recommender_ID;
+    public String getRECOMMENDER_ID() {
+        return RECOMMENDER_ID;
     }
 
-    public void setRecommender_ID(String recommender_ID) {
-        Recommender_ID = recommender_ID;
+    public void setRECOMMENDER_ID(String RECOMMENDER_ID) {
+        this.RECOMMENDER_ID = RECOMMENDER_ID;
     }
 
-    public String getReg_Date() {
-        return Reg_Date;
+    public String getREG_DATE() {
+        return REG_DATE;
     }
 
-    public void setReg_Date(String reg_Date) {
-        Reg_Date = reg_Date;
+    public void setREG_DATE(String REG_DATE) {
+        this.REG_DATE = REG_DATE;
     }
 
-    private int Memeber_Num;
     private String ID;
     private String PASSWORD;
-    private String Name;
-    private String Birth;
-    private String Gender;
-    private String Email;
-    private String Phone;
-    private String Recommender_ID;
-    private String Reg_Date;
-
+    private String NAME;
+    private String BIRTH;
+    private String GENDER;
+    private String EMAIL;
+    private String PHONE;
+    private String RECOMMENDER_ID;
+    private String REG_DATE;
 }
