@@ -52,7 +52,7 @@ public class MemberInsertDao {
             pstmt.setString(8, PHONE);
             pstmt.setString(9, RECOMMENDER_ID);
             pstmt.setString(10, REG_DATE);
-
+            pstmt.executeUpdate();
         } catch (Exception e) {
             e.printStackTrace();
         }
