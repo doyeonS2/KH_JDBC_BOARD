@@ -1,4 +1,5 @@
 package com.kh;
+import com.kh.dao.MemberDeleteDao;
 import com.kh.dao.MemberInsertDao;
 import com.kh.dao.MemberSelectDao;
 import com.kh.dao.Write_dao;
@@ -20,7 +21,7 @@ public class BoardMain {
         Scanner sc = new Scanner(System.in);
             System.out.println("========[MEMBER Table 조회]==========");
             System.out.println("메뉴를 선택하세요");
-            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 게시판나가기");
+            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 게시판나가기 [6] 회원탈퇴");
             int sel = sc.nextInt();
 
             switch (sel) {
@@ -41,6 +42,10 @@ public class BoardMain {
                 case 5:
                     System.out.println("게시판을 나갑니다! 안녕히가십시오");
                     return;
+                case 6:
+                    MemberDeleteDao delete = new MemberDeleteDao();
+                    delete.empDelete();
+                   break;
 
 
         }
