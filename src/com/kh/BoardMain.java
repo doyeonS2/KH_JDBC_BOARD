@@ -31,6 +31,7 @@ public class BoardMain {
                     MemberSelectDao select = new MemberSelectDao();
                     List<MemberVO> list = select.listMember();
                     select.printEmpSelect(list);
+                    break;
                 case 3:
                     Write_dao insert2 = new Write_dao();
                     insert2.writeSelect();
