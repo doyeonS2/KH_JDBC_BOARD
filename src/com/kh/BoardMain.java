@@ -1,6 +1,7 @@
 package com.kh;
 import com.kh.dao.MemberInsertDao;
 import com.kh.dao.MemberSelectDao;
+import com.kh.dao.Write_dao;
 import com.kh.vo.MemberVO;
 
 import java.util.List;
@@ -28,7 +29,7 @@ public class BoardMain {
         while(true){
             System.out.println("========[MEMBER Table 조회]==========");
             System.out.println("메뉴를 선택하세요");
-            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기");
+            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기");
             int sel = sc.nextInt();
             switch (sel) {
                 case 1:
@@ -39,6 +40,12 @@ public class BoardMain {
                     MemberSelectDao select = new MemberSelectDao();
                     List<MemberVO> list = select.listMember();
                     select.printEmpSelect(list);
+                case 3:
+                    Write_dao insert2 = new Write_dao();
+                    insert2.writeSelect();
+                    break;
+
+
             }
         }
     }
