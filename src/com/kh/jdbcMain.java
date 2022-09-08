@@ -12,7 +12,7 @@ import java.sql.Statement;
 // soon 점심시간~~~~
 
 // 정찬호 12:38
-
+// test 민형
 
 public class jdbcMain {
     public static void main(String[] args) {
