@@ -8,7 +8,7 @@ import java.sql.Statement;
 //test 숩
 // 12:33
 //test 은종
-
+// 12:37
 
 
 public class jdbcMain {
