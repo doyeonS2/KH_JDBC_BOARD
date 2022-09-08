@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class MemberInsertDao {
     public void empInsert() {
         Connection conn = null;
-        Statement stmt = null;
+        //Statement stmt = null;
         PreparedStatement pstmt = null;
         Scanner sc = new Scanner(System.in);
         System.out.println("회원가입 정보를 입력하세요");
@@ -55,7 +55,7 @@ public class MemberInsertDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        Common.commit(conn);
+        //Common.commit(conn);
         Common.close(pstmt);
         Common.close(conn);
 
