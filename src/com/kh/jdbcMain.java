@@ -12,8 +12,9 @@ import java.sql.Statement;
 // soon 점심시간~~~~ 은종
 
 // 정찬호 12:38
-
-
+// test 민형
+// test 승렬
+// test 정운
 public class jdbcMain {
     public static void main(String[] args) {
         Connection conn = null;
