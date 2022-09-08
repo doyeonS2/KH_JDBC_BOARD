@@ -1,8 +1,6 @@
 package com.kh;
-import com.kh.util.Common;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import kh_jdbc_board.vo.MemberVO;
+
 import java.util.List;
 import java.util.Scanner;
 //test chanho
@@ -18,7 +16,7 @@ import java.util.Scanner;
 // test 정운
 // ~~ 3조 전원 성공 ~~~~~~~~~~~~~~~~~~~~~~~~~~!!
 
-public class jdbcMain {
+public class BoardMain {
     public static void main(String[] args) {
         MemberSelect();
     }
