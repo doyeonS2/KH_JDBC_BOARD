@@ -11,10 +11,12 @@ import java.util.Scanner;
 // 12:33
 // 12:39 도연 test
 // test 윤정
-// soon 점심시간~~~~
-// 이정운 12 :49
+// soon 점심시간~~~~ 은종
 // 정찬호 12:38
 // test 민형
+// test 승렬
+// test 정운
+// ~~ 3조 전원 성공 ~~~~~~~~~~~~~~~~~~~~~~~~~~!!
 
 public class jdbcMain {
     public static void main(String[] args) {
