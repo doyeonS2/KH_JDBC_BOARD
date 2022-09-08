@@ -21,6 +21,7 @@ public class BoardMain {
             System.out.println("메뉴를 선택하세요");
             System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 게시판나가기");
             int sel = sc.nextInt();
+
             switch (sel) {
                 case 1:
                     MemberInsertDao insert = new MemberInsertDao();
