@@ -42,15 +42,10 @@ public class BoardMain {
                     break;
 
                 case 5:
-                    WriteDelete_dao delete_dao = new WriteDelete_dao();
-                    delete_dao.writeDelete();
-                    break;
-
-                case 6:
                     System.out.println("게시판을 종료합니다.");
                     return;
 
-                case 7:
+                case 6:
                     MemberDeleteDao delete = new MemberDeleteDao();
                     delete.empDelete();
                     break;

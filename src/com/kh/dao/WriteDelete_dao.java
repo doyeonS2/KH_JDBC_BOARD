@@ -1,8 +1,10 @@
 package com.kh.dao;
+
 import com.kh.util.Common;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.util.Scanner;
+
 public class WriteDelete_dao {
     public void writeDelete() {
         Connection conn = null;
