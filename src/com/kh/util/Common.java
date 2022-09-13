@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class Common {
     final static String ORACLE_URL = "jdbc:oracle:thin:@localhost:1521:xe";
     final static String ORACLE_ID = "scott";
-    final static String ORACLE_PW = "tiger";
+    final static String ORACLE_PW = "TIGER";
     final static String ORACLE_DRV = "oracle.jdbc.driver.OracleDriver";
 
     public static Connection getConnection() {
@@ -16,6 +16,7 @@ public class Common {
         try {
             Class.forName(ORACLE_DRV);
             conn = DriverManager.getConnection(ORACLE_URL, ORACLE_ID, ORACLE_PW);
+            conn.setAutoCommit(false);
             System.out.println("Connection 성공");
         } catch (Exception e) {
             e.printStackTrace();

@@ -26,6 +26,7 @@ public class BoardMain {
                     MemberInsertDao insert = new MemberInsertDao();
                     insert.empInsert();
                     break;
+
                 case 2:
                     MemberSelectDao select = new MemberSelectDao();
                     List<MemberVO> list = select.listMember();
@@ -46,6 +47,7 @@ public class BoardMain {
                 case 5:
                     System.out.println("게시판을 나갑니다! 안녕히가십시오");
                     return;
+
                 case 6:
                     MemberDeleteDao delete = new MemberDeleteDao();
                     delete.empDelete();
