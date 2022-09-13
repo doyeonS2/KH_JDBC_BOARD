@@ -27,6 +27,5 @@ public class WriteDelete_dao {
 //        Common.commit(conn);
         Common.close(stmt);
         Common.close(conn);
-
     }
 }

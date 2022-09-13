@@ -28,9 +28,10 @@ public class Read_dao {
                 String write_Id = rs.getString("WRITE_ID");
                 String write_RDate = rs.getString("WRITE_RDATE");
                 int write_ViewCnt = rs.getInt("WRITE_VIEWCNT");
+                String public_file = rs.getString("PUBLIC_FILE");
 
                 WriteVO vo = new WriteVO(write_Name, write_num, write_Title,
-                        write_Contents, write_Id, write_RDate, write_ViewCnt);
+                        write_Contents, write_Id, write_RDate, write_ViewCnt,public_file);
                 list.add(vo);
             }
             Common.close(rs);
@@ -52,6 +53,7 @@ public class Read_dao {
             System.out.print(e.getWrite_Id() + " ");
             System.out.print(e.getWrite_RDate() + " ");
             System.out.print(e.getWrite_ViewCnt() + " ");
+            System.out.print(e.getPublic_File() + " ");
             System.out.println();
         }
     }
