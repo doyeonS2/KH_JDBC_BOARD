@@ -65,12 +65,11 @@ public class Write_dao {
         }
         System.out.print("글 번호를 입력해 주세요 : ");
         int num = sc.nextInt();
+        sc.nextLine();
         System.out.print("글 제목을 입력해 주세요 : ");
-        String title = sc.next();
-        sc.nextLine();
+        String title = sc.nextLine();
         System.out.print("글 내용을 입력해 주세요 : ");
-        String contents = sc.next();
-        sc.nextLine();
+        String contents = sc.nextLine();
         System.out.print("작성자 아이디를 입력해 주세요 : ");
         String id = sc.next();
 
