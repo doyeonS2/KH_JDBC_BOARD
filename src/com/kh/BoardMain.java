@@ -1,9 +1,7 @@
 package com.kh;
-import com.kh.dao.MemberDeleteDao;
-import com.kh.dao.MemberInsertDao;
-import com.kh.dao.MemberSelectDao;
-import com.kh.dao.Write_dao;
+import com.kh.dao.*;
 import com.kh.vo.MemberVO;
+import com.kh.vo.WriteVO;
 
 import java.util.List;
 import java.util.Scanner;
@@ -30,6 +28,7 @@ public class BoardMain {
                     MemberInsertDao insert = new MemberInsertDao();
                     insert.empInsert();
                     break;
+
                 case 2:
                     MemberSelectDao select = new MemberSelectDao();
                     List<MemberVO> list = select.listMember();
@@ -40,9 +39,16 @@ public class BoardMain {
                     Write_dao insert2 = new Write_dao();
                     insert2.writeSelect();
                     break;
+
+                case 4:
+                    Read_dao select2 = new Read_dao();
+                    List<WriteVO> list2 = select2.Read();
+                    select2.printRead(list2);
+
                 case 5:
                     System.out.println("게시판을 나갑니다! 안녕히가십시오");
                     return;
+
                 case 6:
                     MemberDeleteDao delete = new MemberDeleteDao();
                     delete.empDelete();

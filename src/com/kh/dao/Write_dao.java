@@ -51,11 +51,11 @@ public class Write_dao {
 //
     public void writeSelect(){
         String name;
-        System.out.print("작성할 게시판을 선택해 주세요");
+        System.out.println("작성할 게시판을 선택해 주세요");
 
 
         while(true){
-            System.out.print("공지사항 , 등업게시판 , 자유게시판 , 질문게시판 , 스터디모집 , 구인구직 , 이벤트 : ");
+            System.out.print("[공지사항] [등업게시판] [자유게시판] [질문게시판] [스터디모집] [구인구직] [이벤트] -> ");
             name = sc.next();
             if(!name.equals("공지사항") && !name.equals("등업게시판") && !name.equals("자유게시판")
                     && !name.equals("질문게시판") && !name.equals("스터디모집")
