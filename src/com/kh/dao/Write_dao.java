@@ -49,52 +49,76 @@ public class Write_dao {
 //        return list;
 //    }
 //
-    public void writeSelect(){
-        String name;
+    public void writeSelect() {
+        String name ="";
         System.out.println("작성할 게시판을 선택해 주세요");
 
 
-        while(true){
-            System.out.print("[공지사항] [등업게시판] [자유게시판] [질문게시판] [스터디모집] [구인구직] [이벤트] -> ");
-            name = sc.next();
-            if(!name.equals("공지사항") && !name.equals("등업게시판") && !name.equals("자유게시판")
-                    && !name.equals("질문게시판") && !name.equals("스터디모집")
-                    && !name.equals("구인구직") && !name.equals("이벤트"))
-                System.out.print("잘못 입력 하셨습니다. 다시 선택해 주세요");
-            else break;
+//        while (true) {
+//            System.out.print("[공지사항] [등업게시판] [자유게시판] [질문게시판] [스터디모집] [구인구직] [이벤트] -> ");
+//            name = sc.next();
+//            if(!name.equals("공지사항") && !name.equals("등업게시판") && !name.equals("자유게시판")
+//                    && !name.equals("질문게시판") && !name.equals("스터디모집")
+//                    && !name.equals("구인구직") && !name.equals("이벤트"))
+//                System.out.print("잘못 입력 하셨습니다. 다시 선택해 주세요");
+//            else break;
+            int n = sc.nextInt();
+            if (n == 1) {
+                System.out.println("공지사항");
+                name = "공지사항";
+            } else if (n == 2) {
+                System.out.println("등업게시판");
+                name = "등업게시판";
+            } else if (n == 3) {
+                System.out.println("자유게시판");
+                name = "자유게시판";
+            } else if (n == 4) {
+                System.out.println("질문게시판");
+                name = "질문게시판";
+            } else if (n == 5) {
+                System.out.println("스터디모집");
+                name = "스터디모집";
+            } else if (n == 6) {
+                System.out.println("구인구직");
+                name = "구인구직";
+            } else if (n == 7) {
+                System.out.println("이벤트");
+                name = "이벤트";
+
+            }
+            System.out.print("글 번호를 입력해 주세요 : ");
+            int num = sc.nextInt();
+            sc.nextLine();
+            System.out.print("글 제목을 입력해 주세요 : ");
+            String title = sc.nextLine();
+            System.out.print("글 내용을 입력해 주세요 : ");
+            String contents = sc.nextLine();
+            System.out.print("작성자 아이디를 입력해 주세요 : ");
+            String id = sc.next();
+
+
+            String sql = "INSERT INTO WRITE (WRITE_NAME, WRITE_NUM ,WRITE_TITLE ,WRITE_CONTENTS ,WRITE_ID)"
+                    + "VALUES(?,?,?,?,?)";
+
+            try {
+                conn = Common.getConnection();
+                pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, name);
+                pstmt.setInt(2, num);
+                pstmt.setString(3, title);
+                pstmt.setString(4, contents);
+                pstmt.setString(5, id);
+                pstmt.executeUpdate();
+
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            Common.close(pstmt);
+            Common.close(conn);
         }
-        System.out.print("글 번호를 입력해 주세요 : ");
-        int num = sc.nextInt();
-        sc.nextLine();
-        System.out.print("글 제목을 입력해 주세요 : ");
-        String title = sc.nextLine();
-        System.out.print("글 내용을 입력해 주세요 : ");
-        String contents = sc.nextLine();
-        System.out.print("작성자 아이디를 입력해 주세요 : ");
-        String id = sc.next();
-
-
-        String sql = "INSERT INTO WRITE (WRITE_NAME, WRITE_NUM ,WRITE_TITLE ,WRITE_CONTENTS ,WRITE_ID)"
-                + "VALUES(?,?,?,?,?)";
-
-        try{
-            conn = Common.getConnection();
-            pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1,name);
-            pstmt.setInt(2,num);
-            pstmt.setString(3,title);
-            pstmt.setString(4,contents);
-            pstmt.setString(5,id);
-            pstmt.executeUpdate();
-
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        Common.close(pstmt);
-        Common.close(conn);
     }
 
-}
+
 
 
