@@ -84,6 +84,7 @@ public class Write_dao {
             pstmt.setString(3,title);
             pstmt.setString(4,contents);
             pstmt.setString(5,id);
+            pstmt.executeUpdate();
 
 
         }catch (Exception e){

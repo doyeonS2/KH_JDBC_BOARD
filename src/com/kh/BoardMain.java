@@ -43,6 +43,7 @@ public class BoardMain {
                     Read_dao select2 = new Read_dao();
                     List<WriteVO> list2 = select2.Read();
                     select2.printRead(list2);
+                    break;
 
                 case 5:
                     System.out.println("게시판을 나갑니다! 안녕히가십시오");
