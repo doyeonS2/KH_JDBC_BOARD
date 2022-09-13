@@ -15,7 +15,7 @@ public class BoardMain {
         while (true) {
             System.out.println("========[MEMBER Table 조회]==========");
             System.out.println("메뉴를 선택하세요");
-            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 게시판나가기 [6] 회원탈퇴");
+            System.out.println("[1] 회원가입 [2] 회원정보 [3] 글쓰기 [4] 글보기 [5] 글삭제 [6] 게시판나가기 [7] 회원탈퇴");
             int sel = sc.nextInt();
 
             switch (sel) {
@@ -42,10 +42,15 @@ public class BoardMain {
                     break;
 
                 case 5:
+                    WriteDelete_dao delete_dao = new WriteDelete_dao();
+                    delete_dao.writeDelete();
+                    break;
+
+                case 6:
                     System.out.println("게시판을 종료합니다.");
                     return;
 
-                case 6:
+                case 7:
                     MemberDeleteDao delete = new MemberDeleteDao();
                     delete.empDelete();
                     break;
