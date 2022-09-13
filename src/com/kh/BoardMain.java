@@ -45,7 +45,7 @@ public class BoardMain {
                     break;
 
                 case 5:
-                    System.out.println("게시판을 종료합니다");
+                    System.out.println("게시판을 종료합니다.");
                     return;
 
                 case 6:
