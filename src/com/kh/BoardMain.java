@@ -5,9 +5,6 @@ import com.kh.vo.WriteVO;
 
 import java.util.List;
 import java.util.Scanner;
-// 회원가입 완료
-// 글쓰기 완료
-
 public class BoardMain {
     public static void main(String[] args) {
         MemberSelect();
