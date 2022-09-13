@@ -9,6 +9,16 @@ public class WriteVO {
     private String  Write_RDate;
     private int     Write_ViewCnt;
 
+    private String Public_File;
+
+    public String getPublic_File() {
+        return Public_File;
+    }
+
+    public void setPublic_File(String public_File) {
+        Public_File = public_File;
+    }
+
     public String getWrite_Name() {
         return Write_Name;
     }
@@ -67,7 +77,7 @@ public class WriteVO {
 
     public WriteVO(String write_Name, int write_num, String write_Title,
                    String write_Contents, String write_Id,
-                   String write_RDate, int write_ViewCnt) {
+                   String write_RDate, int write_ViewCnt, String public_file) {
         Write_Name = write_Name;
         Write_num = write_num;
         Write_Title = write_Title;
@@ -75,6 +85,7 @@ public class WriteVO {
         Write_Id = write_Id;
         Write_RDate = write_RDate;
         Write_ViewCnt = write_ViewCnt;
+        Public_File = public_file;
 
     }
 }
