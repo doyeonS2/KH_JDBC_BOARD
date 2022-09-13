@@ -27,6 +27,7 @@ public class MemberInsertDao {
         String BIRTH = sc.next();
         System.out.print("성별 : ");
         String GENDER = sc.next();
+        GENDER = GENDER.toUpperCase();
         System.out.print("이메일주소 : ");
         String EMAIL = sc.next();
         System.out.print("휴대폰 번호 : ");
