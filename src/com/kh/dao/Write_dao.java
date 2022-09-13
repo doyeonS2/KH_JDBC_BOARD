@@ -52,7 +52,7 @@ public class Write_dao {
     public void writeSelect() {
         String name ="";
         System.out.println("작성할 게시판을 선택해 주세요");
-
+        System.out.print("[1]공지사항, [2]등업게시판, [3]자유게시판, [4]질문게시판, [5]스터디모집, [6]구인구직, [7]이벤트 -> ");
 
 //        while (true) {
 //            System.out.print("[공지사항] [등업게시판] [자유게시판] [질문게시판] [스터디모집] [구인구직] [이벤트] -> ");
@@ -62,6 +62,7 @@ public class Write_dao {
 //                    && !name.equals("구인구직") && !name.equals("이벤트"))
 //                System.out.print("잘못 입력 하셨습니다. 다시 선택해 주세요");
 //            else break;
+
             int n = sc.nextInt();
             if (n == 1) {
                 System.out.println("공지사항");
