@@ -5,8 +5,6 @@ import com.kh.vo.WriteVO;
 
 import java.util.List;
 import java.util.Scanner;
-
-// 다들 즐거운 추석되세요 껄껄
 // 회원가입 완료
 // 글쓰기 완료
 
