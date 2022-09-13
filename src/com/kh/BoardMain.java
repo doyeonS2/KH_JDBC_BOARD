@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 // 회원가입 완료
 // 글쓰기 완료
+// commit확인
 
 public class BoardMain {
     public static void main(String[] args) {
