@@ -38,7 +38,7 @@ public class MemberInsertDao {
         System.out.print("가입일 : ");
         String REG_DATE = sc.next();
 
-        String query = "INSERT INTO MEMBER  VALUES (?,?,?,?,?,?,?,?,?,?)";
+        String query = "INSERT INTO MEMBER VALUES (?,?,?,?,?,?,?,?,?,?)";
 
         try {
             conn = Common.getConnection();

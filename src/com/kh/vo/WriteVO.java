@@ -88,4 +88,6 @@ public class WriteVO {
         Public_File = public_file;
 
     }
+
+
 }
